@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-29T20:24:05.660415" rpa="false" schemaversion="5">
+<suite id="s1" name="Tp Validation Robotframework" source="C:\Users\julie\Desktop\tp_validation_robotframework">
+<suite id="s1-s1" name="Tests" source="C:\Users\julie\Desktop\tp_validation_robotframework\Tests">
+<suite id="s1-s1-s1" name="Test Montest" source="C:\Users\julie\Desktop\tp_validation_robotframework\Tests\test_montest.robot">
+<test id="s1-s1-s1-t1" name="Scenario: Open Google" line="7">
+<kw name="Given I Am On The Website" owner="test_keywords">
+<kw name="Open The Site" owner="test_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-29T20:24:05.870201" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-29T20:24:05.869789" elapsed="4.131116"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-29T20:24:10.001134" elapsed="0.018000"/>
+</kw>
+<doc>Open The website</doc>
+<status status="PASS" start="2025-01-29T20:24:05.869508" elapsed="4.149816"/>
+</kw>
+<doc>Open the website</doc>
+<status status="PASS" start="2025-01-29T20:24:05.867579" elapsed="4.151848"/>
+</kw>
+<kw name="When I Search" owner="test_keywords">
+<msg time="2025-01-29T20:24:10.023358" level="FAIL">User keyword cannot be empty.</msg>
+<doc>Search</doc>
+<status status="FAIL" start="2025-01-29T20:24:10.021314" elapsed="0.002441">User keyword cannot be empty.</status>
+</kw>
+<kw name="Then I Have A Search Result">
+<status status="NOT RUN" start="2025-01-29T20:24:10.025194" elapsed="0.001462"/>
+</kw>
+<doc>Open the website</doc>
+<status status="FAIL" start="2025-01-29T20:24:05.866833" elapsed="4.161295">User keyword cannot be empty.</status>
+</test>
+<doc>This test suite contains test cases for the google site</doc>
+<status status="FAIL" start="2025-01-29T20:24:05.679531" elapsed="4.349348"/>
+</suite>
+<status status="FAIL" start="2025-01-29T20:24:05.678119" elapsed="4.351771"/>
+</suite>
+<status status="FAIL" start="2025-01-29T20:24:05.664095" elapsed="4.366578"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tp Validation Robotframework" id="s1" pass="0" fail="1" skip="0">Tp Validation Robotframework</stat>
+<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">Tp Validation Robotframework.Tests</stat>
+<stat name="Test Montest" id="s1-s1-s1" pass="0" fail="1" skip="0">Tp Validation Robotframework.Tests.Test Montest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

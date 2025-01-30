@@ -1,56 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-29T20:24:05.660415" rpa="false" schemaversion="5">
-<suite id="s1" name="Tp Validation Robotframework" source="C:\Users\julie\Desktop\tp_validation_robotframework">
-<suite id="s1-s1" name="Tests" source="C:\Users\julie\Desktop\tp_validation_robotframework\Tests">
-<suite id="s1-s1-s1" name="Test Montest" source="C:\Users\julie\Desktop\tp_validation_robotframework\Tests\test_montest.robot">
-<test id="s1-s1-s1-t1" name="Scenario: Open Google" line="7">
-<kw name="Given I Am On The Website" owner="test_keywords">
-<kw name="Open The Site" owner="test_keywords">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-30T16:47:24.309700" rpa="false" schemaversion="5">
+<suite id="s1" name="Tp Validation Robotframework" source="C:\Users\Administrateur\Desktop\tp_validation_robotframework\tp_validation_robotframework">
+<suite id="s1-s1" name="Tests" source="C:\Users\Administrateur\Desktop\tp_validation_robotframework\tp_validation_robotframework\Tests">
+<suite id="s1-s1-s1" name="Test Montest" source="C:\Users\Administrateur\Desktop\tp_validation_robotframework\tp_validation_robotframework\Tests\test_montest.robot">
+<test id="s1-s1-s1-t1" name="Scenario: Search For A Specific Product And Verify The Results" line="13">
+<kw name="Given The Browser Is Launched" owner="test_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-29T20:24:05.870201" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<msg time="2025-01-30T16:47:24.487921" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-29T20:24:05.869789" elapsed="4.131116"/>
+<status status="PASS" start="2025-01-30T16:47:24.487466" elapsed="2.753548"/>
+</kw>
+<kw name="Accept Cookie" owner="test_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-30T16:47:27.242027" level="INFO">Clicking button '//button[@class='fc-button fc-cta-consent fc-primary-button']'.</msg>
+<arg>${COOKIE}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-30T16:47:27.241665" elapsed="0.100714"/>
+</kw>
+<doc>accept cookie</doc>
+<status status="PASS" start="2025-01-30T16:47:27.241295" elapsed="0.101271"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-29T20:24:10.001134" elapsed="0.018000"/>
+<status status="PASS" start="2025-01-30T16:47:27.342710" elapsed="0.034761"/>
 </kw>
-<doc>Open The website</doc>
-<status status="PASS" start="2025-01-29T20:24:05.869508" elapsed="4.149816"/>
+<doc>Open Browser</doc>
+<status status="PASS" start="2025-01-30T16:47:24.485022" elapsed="2.892665"/>
 </kw>
-<doc>Open the website</doc>
-<status status="PASS" start="2025-01-29T20:24:05.867579" elapsed="4.151848"/>
+<kw name="And The User Navigates" owner="test_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-30T16:47:27.382947" level="INFO">Opening url 'https://automationexercise.com'</msg>
+<arg>${URL_AUTOMATION}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-30T16:47:27.381865" elapsed="0.877175"/>
 </kw>
-<kw name="When I Search" owner="test_keywords">
-<msg time="2025-01-29T20:24:10.023358" level="FAIL">User keyword cannot be empty.</msg>
-<doc>Search</doc>
-<status status="FAIL" start="2025-01-29T20:24:10.021314" elapsed="0.002441">User keyword cannot be empty.</status>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-30T16:47:28.390475" level="INFO">Current location contains 'https://automationexercise.com'.</msg>
+<arg>${URL_AUTOMATION}</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-01-30T16:47:28.259257" elapsed="0.131509"/>
 </kw>
-<kw name="Then I Have A Search Result">
-<status status="NOT RUN" start="2025-01-29T20:24:10.025194" elapsed="0.001462"/>
+<arg>https://automationexercise.com</arg>
+<doc>Navigates</doc>
+<status status="PASS" start="2025-01-30T16:47:27.379487" elapsed="1.011439"/>
 </kw>
-<doc>Open the website</doc>
-<status status="FAIL" start="2025-01-29T20:24:05.866833" elapsed="4.161295">User keyword cannot be empty.</status>
+<kw name="Then The Homepage Is Visible" owner="test_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOMEPAGE_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-30T16:47:28.396118" elapsed="0.033207"/>
+</kw>
+<doc>the homepage is visible</doc>
+<status status="PASS" start="2025-01-30T16:47:28.393479" elapsed="0.036115"/>
+</kw>
+<kw name="When The User Clicks On The &quot;Products&quot; Button" owner="test_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${PRODUCTS_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-30T16:47:28.435462" elapsed="0.072211"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-30T16:47:28.508285" level="INFO">Clicking element '//header//a[@href='/products']'.</msg>
+<arg>${PRODUCTS_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-30T16:47:28.507902" elapsed="1.981374"/>
+</kw>
+<doc>click on the products button</doc>
+<status status="PASS" start="2025-01-30T16:47:28.433194" elapsed="2.056404"/>
+</kw>
+<kw name="Then The User Is Successfully Redirected To The Page" owner="test_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${H2_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-30T16:47:30.492857" elapsed="0.021550"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${H2_TITLE}</arg>
+<arg>${TITLE}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-01-30T16:47:30.515106" elapsed="0.020800"/>
+</kw>
+<arg>ALL PRODUCTS</arg>
+<doc>redirect to all products page</doc>
+<status status="PASS" start="2025-01-30T16:47:30.491525" elapsed="0.044726"/>
+</kw>
+<kw name="When The User Enters In The Search Bar And Clicks On The &quot;Search&quot; Button" owner="test_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${SEARCH}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-30T16:47:30.540314" elapsed="0.026977"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-30T16:47:30.568064" level="INFO">Typing text 'Dress' into text field '//input[@id='search_product']'.</msg>
+<arg>${SEARCH}</arg>
+<arg>${PRODUCT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-30T16:47:30.567586" elapsed="0.088459"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-30T16:47:30.656749" level="INFO">Clicking button '//button[@id='submit_search']'.</msg>
+<arg>${SUBMIT_SEARCH}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-30T16:47:30.656294" elapsed="1.710542"/>
+</kw>
+<arg>Dress</arg>
+<doc>Search product "Dress"</doc>
+<status status="PASS" start="2025-01-30T16:47:30.538564" elapsed="1.828435"/>
+</kw>
+<kw name="Then Is Visible" owner="test_keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${H2_TITLE}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-30T16:47:32.370894" elapsed="0.287288"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${H2_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-30T16:47:32.658486" elapsed="0.012750"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${H2_TITLE}</arg>
+<arg>${TITLE}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-01-30T16:47:32.671616" elapsed="0.010780"/>
+</kw>
+<arg>SEARCHED PRODUCTS</arg>
+<doc>SEARCH PRODUCTS is visible</doc>
+<status status="PASS" start="2025-01-30T16:47:32.368060" elapsed="0.314503"/>
+</kw>
+<kw name="And The Displayed Results Contain" owner="test_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${PRODUCT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-30T16:47:32.687388" elapsed="0.011120"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-30T16:47:32.698741" elapsed="2.129806"/>
+</kw>
+<arg>Dress</arg>
+<doc>the displayed result contain dress</doc>
+<status status="PASS" start="2025-01-30T16:47:32.684538" elapsed="2.144240"/>
+</kw>
+<status status="PASS" start="2025-01-30T16:47:24.483742" elapsed="10.347080"/>
 </test>
 <doc>This test suite contains test cases for the google site</doc>
-<status status="FAIL" start="2025-01-29T20:24:05.679531" elapsed="4.349348"/>
+<status status="PASS" start="2025-01-30T16:47:24.335588" elapsed="10.497611"/>
 </suite>
-<status status="FAIL" start="2025-01-29T20:24:05.678119" elapsed="4.351771"/>
+<status status="PASS" start="2025-01-30T16:47:24.332998" elapsed="10.501778"/>
 </suite>
-<status status="FAIL" start="2025-01-29T20:24:05.664095" elapsed="4.366578"/>
+<status status="PASS" start="2025-01-30T16:47:24.313489" elapsed="10.523212"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Tp Validation Robotframework" id="s1" pass="0" fail="1" skip="0">Tp Validation Robotframework</stat>
-<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">Tp Validation Robotframework.Tests</stat>
-<stat name="Test Montest" id="s1-s1-s1" pass="0" fail="1" skip="0">Tp Validation Robotframework.Tests.Test Montest</stat>
+<stat name="Tp Validation Robotframework" id="s1" pass="1" fail="0" skip="0">Tp Validation Robotframework</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Tp Validation Robotframework.Tests</stat>
+<stat name="Test Montest" id="s1-s1-s1" pass="1" fail="0" skip="0">Tp Validation Robotframework.Tests.Test Montest</stat>
 </suite>
 </statistics>
 <errors>

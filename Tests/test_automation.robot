@@ -5,24 +5,24 @@ Resource    ../Ressources/keywords/automation_keywords.robot
 
 *** Variables ***
 &{USERS}
-...    username=Titi    
-...    lastname=Titi    
-...    firstname=Titi    
-...    email=titi${{random.randint(1000, 9999)}}@tutu.fr    
-...    password=password    
-...    birthday=10    
-...    birthmonth=3    
-...    birthyear=2012    
-...    adress=666 rue des enfers    
-...    country=Canada    
-...    state=state    
-...    city=city    
-...    zip=12345    
-...    mobile=0102030405    
-...    cardnumber=1111 1111 1111    
-...    cardcvc=555    
-...    cardmonth=12    
-...    cardyear=2027    
+...    username=Titi
+...    lastname=Titi
+...    firstname=Titi
+...    email=titi${{random.randint(1000, 9999)}}@tutu.fr
+...    password=password
+...    birthday=10
+...    birthmonth=3
+...    birthyear=2012
+...    adress=666 rue des enfers
+...    country=Canada
+...    state=state
+...    city=city
+...    zip=12345
+...    mobile=0102030405
+...    cardnumber=1111 1111 1111
+...    cardcvc=555
+...    cardmonth=12
+...    cardyear=2027
 
 
 *** Test Cases ***

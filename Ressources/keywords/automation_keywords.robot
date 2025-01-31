@@ -83,7 +83,7 @@ The User Places The Order
     [Arguments]    &{USERS}
     Verify Cart
     The User Proceeds To Checkout    &{USERS}
-    Input Text    ${COM}    mon commentaire
+    Verify Order
     Click Element    ${PLACE_ORDER}
     Add Payment    &{USERS}
     Wait Until Element Is Visible    ${CONFIRM_ORDER}
@@ -183,3 +183,13 @@ Download Invoice
     ${FICHIER}    Set Variable    ${PATH_INVOICE}
     Wait Until Created    ${FICHIER}    10s
     File Should Exist    ${FICHIER}
+
+Verify Order
+    [Documentation]    Verify Order
+    ${DESCRIPTION}    Set Variable    ''
+    FOR    ${ITEM}    IN RANGE    2    5
+        Wait Until Element Is Visible    id=product-${ITEM}
+        ${DESC}    Get Text    //tr[@id='product-${ITEM}']//td[@class='cart_description']//p
+        ${DESCRIPTION}    Set Variable    ${DESCRIPTION} ${DESC}
+    END
+    Input Text    ${COM}    ${DESCRIPTION}
